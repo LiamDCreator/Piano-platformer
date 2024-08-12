@@ -15,10 +15,13 @@ public class bulletScript : MonoBehaviour
    }
     void OnCollisionEnter2D(Collision2D collision){
  
-    if (collision.gameObject.CompareTag("Enemy") || collision.gameObject.CompareTag("Structure")) 
+    if (collision.gameObject.CompareTag("Player")) 
         { 
-       destroyBullet();
-    }}
+      
+    } else {
+         destroyBullet();
+    }
+    }
 
     private void destroyBullet(){
 
