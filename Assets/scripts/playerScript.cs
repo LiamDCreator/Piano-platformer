@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class playerScript : MonoBehaviour
 {
+    public Canvas playerDiedScreen;
     public float moveSpeed = 5f; 
      private Rigidbody2D rb;
     public float jumpForce = 10f; 
@@ -39,6 +40,6 @@ public class playerScript : MonoBehaviour
  
     if (collision.gameObject.CompareTag("Enemy")) 
         { 
-         Destroy(gameObject);
+        gameObject.SetActive(false);
     }}
 }
