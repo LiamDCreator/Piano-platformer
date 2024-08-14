@@ -1,10 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.UI;
 public class playerScript : MonoBehaviour
 {
-    public Canvas playerDiedScreen;
+    public GameObject playerDiedScreen;
     public float moveSpeed = 5f; 
      private Rigidbody2D rb;
     public float jumpForce = 10f; 
@@ -41,5 +41,6 @@ public class playerScript : MonoBehaviour
     if (collision.gameObject.CompareTag("Enemy")) 
         { 
         gameObject.SetActive(false);
+        playerDiedScreen.SetActive(true);
     }}
 }
